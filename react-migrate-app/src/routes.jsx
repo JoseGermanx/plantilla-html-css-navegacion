@@ -11,7 +11,7 @@ export const router = createBrowserRouter(
         // un componente "Route" por cada ruta
         <Route path="/" element={<Layout />}>
             <Route path="/" element={<Home />} />
-            <Route path="/post" element={<PostDetail />} />
+            <Route path="/post/:id" element={<PostDetail />} />
             <Route path="/ejemplo" element={<h1>Hola ejemplo</h1>} />
         </Route>
     )

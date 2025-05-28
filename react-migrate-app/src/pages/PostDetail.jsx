@@ -1,6 +1,13 @@
 
+import { posts } from '../data/posts'
+import { useParams } from 'react-router-dom'
 
-const PostDetail = () => {
+ const PostDetail = () => {
+
+  const { id } = useParams()
+
+  const post = posts.find((post) => post.id === parseInt(id))
+
 
     return (
            <div class="container">
@@ -9,11 +16,8 @@ const PostDetail = () => {
       </header>
 
       <main class="content">
-      <h1>Título del Post 1</h1>
-      <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-            architecto expedita voluptatibus quisquam minima doloribus, nihil
-            perspiciatis atque in deleniti.
-      </p>
+      <h1>{post.title}</h1>
+      <p>{post.content}</p>
       </main>
 
       <aside class="sidebar">

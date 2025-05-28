@@ -1,5 +1,5 @@
-
-
+import { posts } from '../data/posts'
+import { Link } from "react-router";
 
 
 const Home = () => {
@@ -12,56 +12,14 @@ const Home = () => {
             </header>
 
             <main class="content">
-                <article class="article">
-                    <h2><a href="./post1.html">Title Post 1</a></h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                        architecto expedita voluptatibus quisquam minima doloribus, nihil
-                        perspiciatis atque in deleniti.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
-                        dolores.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia,
-                        quos.
-                    </p>
-                </article>
-
-                <article class="article">
-                    <h2><a href="./post2.html">Title Post 2</a></h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                        architecto expedita voluptatibus quisquam minima doloribus, nihil
-                        perspiciatis atque in deleniti.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
-                        dolores.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia,
-                        quos.
-                    </p>
-                </article>
-
-                <article class="article">
-                    <h2><a href="./post3.html">Title Post 3</a></h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                        architecto expedita voluptatibus quisquam minima doloribus, nihil
-                        perspiciatis atque in deleniti.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
-                        dolores.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia,
-                        quos.
-                    </p>
-                </article>
+                {
+                    posts.map((post)=> (
+                        <article class="article">
+                            <h2><Link to={`/post/${post.id}`}>{post.title}</Link></h2>
+                            <p>{post.content}</p>
+                        </article>
+                    ))
+                }
             </main>
 
             <aside class="sidebar">

@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { posts } from "../data/posts";
 
 const NavBar = () => {
     return (
@@ -9,9 +10,13 @@ const NavBar = () => {
             <nav class="navbar">
                 <ul>
                     <li><Link to="/">Inicio</Link></li>
-                    <li><Link to="/post">Post 1</Link></li>
-                    <li><Link to="/post">Post 2</Link></li>
-                    <li><Link to="/post">Post 3</Link></li>
+                    {
+                        posts.map((post) => (
+                            <li key={post.id}>
+                                <Link to={`/post/${post.id}`}>Post {post.id}</Link>
+                            </li>
+                        ))
+                    }
                 </ul>
             </nav>
         </>
