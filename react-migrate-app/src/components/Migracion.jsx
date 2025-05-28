@@ -1,26 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>css grid</title>
-    <link rel="stylesheet" href="main.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header class="title">
+
+
+
+const Migracion = () => {
+  return (
+    <div> <header class="title">
       <h1>CCS GRID</h1>
     </header>
     <nav class="navbar">
       <ul>
-        <li><a href="./index.html">Inicio</a></li>
-        <li><a href="./post1.html">Post 1</a></li>
-        <li><a href="./post2.html">Post 2</a></li>
-        <li><a href="./post3.html">Post 3</a></li>
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="/post1.html">Post 1</a></li>
+        <li><a href="/post2.html">Post 2</a></li>
+        <li><a href="/post3.html">Post 3</a></li>
       </ul>
     </nav>
 
@@ -31,7 +22,7 @@
 
       <main class="content">
         <article class="article">
-          <h2><a href="./post1.html">Title Post 1</a></h2>
+          <h2><a href="/post1.html">Title Post 1</a></h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
             architecto expedita voluptatibus quisquam minima doloribus, nihil
@@ -48,7 +39,7 @@
         </article>
 
         <article class="article">
-          <h2><a href="./post2.html">Title Post 2</a></h2>
+          <h2><a href="/post2.html">Title Post 2</a></h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
             architecto expedita voluptatibus quisquam minima doloribus, nihil
@@ -65,7 +56,7 @@
         </article>
 
         <article class="article">
-          <h2><a href="./post3.html">Title Post 3</a></h2>
+          <h2><a href="/post3.html">Title Post 3</a></h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
             architecto expedita voluptatibus quisquam minima doloribus, nihil
@@ -125,6 +116,8 @@
           blanditiis culpa voluptate omnis nemo molestias!
         </p>
       </footer>
-    </div>
-  </body>
-</html>
+    </div></div>
+  )
+}
+
+export default Migracion
