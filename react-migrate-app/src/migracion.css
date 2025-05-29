@@ -37,7 +37,7 @@ body {
 .container > div {
     background-color: white;
     padding: 20px;
-    border : 1px solid #000;
+   
 }
 
 .container .header,
